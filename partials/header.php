@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr"<?php
-if(isset($page_id))   { echo ' id="' . $page_id . '"'; }
-if(isset($page_class)){ echo ' class="' . $page_class . '"'; }
+if(isset($pageId))   { echo ' id="' . $pageId . '"'; }
+if(isset($pageClass)){ echo ' class="' . $pageClass . '"'; }
 ?>>
 <head>
   <meta charset="utf-8">
@@ -13,6 +13,7 @@ if(isset($page_class)){ echo ' class="' . $page_class . '"'; }
               } ?>Website Title'</title>
 
   <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/sass/screen.php" media="screen">
 
   <!-- Full stylesheet for everything above IE6 -->
   <!--[if ! lte IE 6]><!-->

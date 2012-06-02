@@ -6,5 +6,9 @@ A very simple framework for building websites using [Perch](http://grabaperch.co
 2. Go [buy a perch license](https://grabaperch.com/buy) and copy the Perch application files to repo/perch.
 3. Follow the Perch [installation instructions](http://support.grabaperch.com/index.php?pg=kb.page&id=3).
 
+## Features
+
+* Use haml and sass
+
 ## License
 There is none! Do what you like - use it edit it, distribute it as your own (this excludes the parts which are not mine, e.g. Andy Clarke's ie6.css which are subject to their own licenses).
