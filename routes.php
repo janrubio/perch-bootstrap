@@ -6,6 +6,8 @@
 
   if (file_exists($hamlPath)) {
     $page = $haml->parse($hamlPath);
+  } elseif($hamlPath == '.haml') {
+    $page = $haml->parse('index.haml');
   } else {
     $page = '404';
   }
