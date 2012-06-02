@@ -8,7 +8,8 @@ A very simple framework for building websites using [Perch](http://grabaperch.co
 
 ## Features
 
-* Use haml and sass
+* Use haml and sass/less
+* [Semantic grid system](http://semantic.gs/)
 
 ## License
 There is none! Do what you like - use it edit it, distribute it as your own (this excludes the parts which are not mine, e.g. Andy Clarke's ie6.css which are subject to their own licenses).

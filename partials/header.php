@@ -14,6 +14,7 @@ if(isset($pageClass)){ echo ' class="' . $pageClass . '"'; }
 
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" href="/sass/screen.php" media="screen">
+  <link rel="stylesheet" href="/sass/screen.less" type="text/less" media="screen" />
 
   <!-- Full stylesheet for everything above IE6 -->
   <!--[if ! lte IE 6]><!-->
