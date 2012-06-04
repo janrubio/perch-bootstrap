@@ -55,10 +55,6 @@ a{
 a:hover{
   text-decoration:none;
 }
-a:active{
-  position:relative;
-  top:1px;
-}
 
 /**************************** Buttons  *******************************************/
 a.button, .submit button{}
