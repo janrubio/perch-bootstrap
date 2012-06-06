@@ -11,5 +11,17 @@ A very simple framework for building websites using [Perch](http://grabaperch.co
 * Use haml and sass/less
 * [Semantic grid system](http://semantic.gs/)
 
+### How the routing works with haml
+
+By default, if the file doesn't exist on the server ``` routes.php ``` will try to find the corresponding haml file to render.
+For example, ``` /news ``` will render ``` /news.haml ``` and ``` /products/electronics ``` will render ``` /products/electronics.haml ```.
+
+Query strings are also supported. Given a request ``` /news?title=Hello%20World ```, in ``` /news.haml ``` we can write ``` %title= $_GET['title'] ```
+
+If the haml file is not found, ``` routes.php ``` will attempt to find a haml file matching the path before it.
+For example, ``` /news/Hello%20World ``` when ``` /news/Hello%20World.haml ``` doesn't exist, it will try to render ``` /news.haml ```.
+If ``` /news.haml ``` exists, ``` $URI_KEY ``` is set to "Hello World". This allows us to have cleaner urls without needing to use query strings.
+The one caveat is that it only looks one level deep and does not keep searching until a haml file is found.
+
 ## License
 There is none! Do what you like - use it edit it, distribute it as your own (this excludes the parts which are not mine, e.g. Andy Clarke's ie6.css which are subject to their own licenses).
