@@ -15,6 +15,9 @@ if(isset($pageClass)){ echo ' class="' . $pageClass . '"'; }
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="stylesheet" href="/sass/screen.php" media="screen">
   <link rel="stylesheet" href="/sass/screen.less" type="text/less" media="screen" />
+  <link rel="stylesheet" href="/sass/header.less" type="text/less" media="screen" />
+  <link rel="stylesheet" href="/sass/footer.less" type="text/less" media="screen" />
+  <?php if(isset($pageId)) { echo '<link rel="stylesheet" href="/sass/pages/'.$pageId.'.less" type="text/less" media="screen" />'; } ?>
 
   <!-- Full stylesheet for everything above IE6 -->
   <!--[if ! lte IE 6]><!-->
@@ -23,6 +26,10 @@ if(isset($pageClass)){ echo ' class="' . $pageClass . '"'; }
 
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!--[if lte IE 9]>
+    <link rel="stylesheet" href="/css/ie9.css" media="screen, projection">
   <![endif]-->
 
   <!--[if lte IE 8]>
@@ -50,7 +57,9 @@ if(isset($pageClass)){ echo ' class="' . $pageClass . '"'; }
     <a href="http://www.opera.com/download/">Opera</a>.
   </p>
 <![endif]-->
-<header role="banner">
 
-</header>
-
+<?php
+  $haml = new HamlParser(array('style' => 'nested', 'ugly' => false));
+  $page = $haml->parse('partials/header.haml');
+  eval('?'.'>'.$page);
+?>
