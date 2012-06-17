@@ -26,7 +26,7 @@
   } elseif ($hamlPath == '.haml') {
     $page = $haml->parse('index.haml');
   } else {
-    $page = '404';
+    $page = $haml->parse('404.haml');
   }
 
   eval('?'.'>'.$page);
